@@ -6,7 +6,7 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 15:44:27 by silim             #+#    #+#             */
-/*   Updated: 2020/10/10 15:44:40 by silim            ###   ########.fr       */
+/*   Updated: 2020/10/10 16:25:59 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strrchr(const char *s, int c)
 	head = s;
 	while (*head)
 		head++;
-	while (head != s)
+	while (head != s && head)
 	{
 		if (*head == (char)c)
 			return ((char *)head);
