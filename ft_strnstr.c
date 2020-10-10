@@ -6,7 +6,7 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 15:45:07 by silim             #+#    #+#             */
-/*   Updated: 2020/10/10 23:12:00 by silim            ###   ########.fr       */
+/*   Updated: 2020/10/10 23:37:07 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,5 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		}
 		big_i++;
 	}
+	return (0);
 }
