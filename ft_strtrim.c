@@ -6,7 +6,7 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 15:21:38 by silim             #+#    #+#             */
-/*   Updated: 2020/10/10 15:22:01 by silim            ###   ########.fr       */
+/*   Updated: 2020/10/11 00:09:08 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		if ((ft_strchr(set, s1[current_index])) && start_index != -1)
 		{
 			end_index = current_index;
-			break;
+			break ;
 		}
 		++current_index;
 	}
@@ -40,14 +40,4 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (ft_strdup(""));
 	new_str = ft_substr(s1, start_index, end_index - start_index + 1);
 	return (new_str);
-}
-
-int 	main(int ac, char **av)
-{
-	puts(ft_strtrim("DCCBA", "AB"));
-	puts(ft_strtrim("ACCBACBA", "AB"));
-	puts(ft_strtrim("Hello World!", "Hlde"));  hello
-	puts(ft_strtrim("HELLO", "T"));
-	puts(ft_strtrim("TFTFT", "FT"));
-	return (0);
 }

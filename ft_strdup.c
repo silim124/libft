@@ -6,13 +6,13 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 15:21:20 by silim             #+#    #+#             */
-/*   Updated: 2020/10/10 15:21:20 by silim            ###   ########.fr       */
+/*   Updated: 2020/10/11 00:09:24 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
 	char	*new_mem;
 	size_t	len;

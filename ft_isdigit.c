@@ -6,11 +6,11 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 15:20:57 by silim             #+#    #+#             */
-/*   Updated: 2020/10/10 15:22:04 by silim            ###   ########.fr       */
+/*   Updated: 2020/10/11 00:16:25 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
 		return (1);

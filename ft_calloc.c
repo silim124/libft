@@ -6,7 +6,7 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 15:20:48 by silim             #+#    #+#             */
-/*   Updated: 2020/10/10 15:46:46 by silim            ###   ########.fr       */
+/*   Updated: 2020/10/11 00:06:19 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	char	*new_mem;
+
 	if (!(new_mem = malloc(size * nmemb)))
 		return (0);
 	ft_memset(new_mem, 0, nmemb * size);

@@ -6,19 +6,18 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 15:21:15 by silim             #+#    #+#             */
-/*   Updated: 2020/10/10 15:22:04 by silim            ###   ########.fr       */
+/*   Updated: 2020/10/10 23:58:24 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    *ft_memset(void *s, int c, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
-    size_t	i;
+	size_t	i;
 
-    i = 0;
-    while (i < n)
-        ((unsigned char *)s)[i++] = (unsigned char)c;
-    return (s);
+	i = 0;
+	while (i < n)
+		((unsigned char *)s)[i++] = (unsigned char)c;
+	return (s);
 }
-
