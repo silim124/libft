@@ -6,7 +6,7 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 15:21:34 by silim             #+#    #+#             */
-/*   Updated: 2020/10/10 15:22:04 by silim            ###   ########.fr       */
+/*   Updated: 2020/10/10 16:09:08 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	unsigned int	count;
 	unsigned int	i;
 
+	if (dstsize == 0)
+		return (ft_strlen(src));
 	count = 0;
 	i = -1;
 	while (src[count])
