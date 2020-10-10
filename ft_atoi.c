@@ -6,13 +6,13 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/01 17:40:38 by silim             #+#    #+#             */
-/*   Updated: 2020/10/11 02:02:53 by silim            ###   ########.fr       */
+/*   Updated: 2020/10/11 02:04:23 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_atoi(const char *str)
 {
-	long long	num;
+	long	num;
 	int		sign;
 
 	num = 0;
