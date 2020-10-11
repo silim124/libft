@@ -6,7 +6,7 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 15:21:28 by silim             #+#    #+#             */
-/*   Updated: 2020/10/11 16:51:19 by silim            ###   ########.fr       */
+/*   Updated: 2020/10/11 16:55:09 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*new_str;
 	size_t	i;
 
-	if (!s1 || !s2)
+	if (!s1 && !s2)
 		return (0);
 	if (!(new_str = malloc(sizeof(char) * (ft_strlen(s1) + \
 	 ft_strlen(s2) + 1))))
