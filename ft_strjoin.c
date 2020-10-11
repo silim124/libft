@@ -6,7 +6,7 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 15:21:28 by silim             #+#    #+#             */
-/*   Updated: 2020/10/11 16:55:09 by silim            ###   ########.fr       */
+/*   Updated: 2020/10/11 16:57:52 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	i = 0;
 	while (*s1)
 		new_str[i++] = *s1++;
-	while (*s1)
+	while (*s2)
 		new_str[i++] = *s2++;
 	new_str[i] = '\0';
 	return (new_str);
