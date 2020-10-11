@@ -6,7 +6,7 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 15:21:38 by silim             #+#    #+#             */
-/*   Updated: 2020/10/11 16:40:13 by silim            ###   ########.fr       */
+/*   Updated: 2020/10/11 17:01:18 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	end_index = ft_strlen(s1) - 1;
 	if (start_index >= end_index)
 		return (ft_strdup(""));
-	while (s1[end_index] && end_index != start_index)
+	while (ft_is_set(s1[end_index], set) && end_index != start_index)
 		end_index--;
 	return (ft_substr(s1, start_index, end_index - start_index + 1));
 }
