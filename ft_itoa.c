@@ -6,7 +6,7 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/12 23:51:30 by silim             #+#    #+#             */
-/*   Updated: 2020/10/13 00:19:04 by silim            ###   ########.fr       */
+/*   Updated: 2020/10/13 00:23:02 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,11 @@ static size_t	ft_len(long nbr)
 
 	len = 0;
 	len = (nbr <= 0) ? 1 : 0;
-	while (nbr /= 10)
+	while (nbr)
+	{
+		nbr /= 10;
 		++len;
+	}
 	return (len);
 }
 
