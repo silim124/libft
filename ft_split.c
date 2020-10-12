@@ -6,13 +6,13 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/11 17:08:33 by silim             #+#    #+#             */
-/*   Updated: 2020/10/12 22:13:45 by silim            ###   ########.fr       */
+/*   Updated: 2020/10/12 22:15:17 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	free_error(char **word_set)
+static void	*free_error(char **word_set)
 {
 	unsigned int	i;
 
@@ -26,9 +26,9 @@ static char	free_error(char **word_set)
 	return (NULL);
 }
 
-static int	get_size(char const *s, char c)
+static size_t	get_size(char const *s, char c)
 {
-	int	count;
+	size_t	count;
 
 	count = 0;
 	while (*s)
