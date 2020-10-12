@@ -6,7 +6,7 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/12 23:51:30 by silim             #+#    #+#             */
-/*   Updated: 2020/10/13 00:08:41 by silim            ###   ########.fr       */
+/*   Updated: 2020/10/13 00:10:57 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_itoa(int nbr)
 {
 	char	*str;
 	long	n;
-	size_t	i;
+	size_t	len;
 
 	n = nbr;
 	len = ft_len(n);
@@ -40,8 +40,8 @@ char	*ft_itoa(int nbr)
 	}
 	while (len >= 0)
 		{
-			str[len] = '0' + -(n % 10);
-			n = -(n / 10);
+			str[len] = '0' + (n % 10);
+			n = n / 10;
 			len--;
 		}
 	return (str);
