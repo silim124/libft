@@ -6,13 +6,13 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/11 17:08:33 by silim             #+#    #+#             */
-/*   Updated: 2020/10/12 22:11:49 by silim            ###   ########.fr       */
+/*   Updated: 2020/10/12 22:13:45 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	malloc_error(char **word_set)
+static char	free_error(char **word_set)
 {
 	unsigned int	i;
 
@@ -54,7 +54,7 @@ static char	**split_word(char **word_set, char const *s, char c)
 			while (s[end] != c)
 				end++;
 			if (!(word_set[n] = ft_substr((s + start), start, end)))
-				return (ft_malloc_error(word_set));
+				return (free_error(word_set));
 			start = end + 1;
 			n++;
 		}
