@@ -6,7 +6,7 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/11 17:08:33 by silim             #+#    #+#             */
-/*   Updated: 2020/10/12 22:15:17 by silim            ###   ########.fr       */
+/*   Updated: 2020/10/12 22:34:42 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static size_t	get_size(char const *s, char c)
 	count = 0;
 	while (*s)
 	{
-		if (ft_strchr(s, c))
+		if (*s == c)
 			count++;
 		s++;
 	}
@@ -48,15 +48,18 @@ static char	**split_word(char **word_set, char const *s, char c)
 
 	start = 0;
 	n = 0;
-	while (s[start] && n < (get_size(s, c)))
+	end = 0;
+	while (s[end] == c)
+		++end;
+	while (s[end] && n < (get_size(s, c)))
 		{
-			end = start;
+			start = end;
 			while (s[end] != c)
-				end++;
-			if (!(word_set[n] = ft_substr((s + start), start, end)))
+				++end;
+			if (!(word_set[n++] = ft_substr(s, start, end - start)))
 				return (free_error(word_set));
-			start = end + 1;
-			n++;
+			while (s[end] == c)
+				++end;
 		}
 		word_set[n] = 0;
 	return (word_set);
