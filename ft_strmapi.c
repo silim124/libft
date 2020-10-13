@@ -6,7 +6,7 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/13 17:07:47 by silim             #+#    #+#             */
-/*   Updated: 2020/10/13 18:43:24 by silim            ###   ########.fr       */
+/*   Updated: 2020/10/13 19:01:46 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*new_str;
-	size_t	len;
+	unsigned int	len;
 
 	if (!s || !f)
 		return (0);
