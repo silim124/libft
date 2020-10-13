@@ -6,7 +6,7 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 15:21:38 by silim             #+#    #+#             */
-/*   Updated: 2020/10/11 17:01:18 by silim            ###   ########.fr       */
+/*   Updated: 2020/10/13 14:22:08 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static int	ft_is_set(char const c, char const *set)
 	return (0);
 }
 
-char	*ft_strtrim(char const *s1, char const *set)
+char		*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	start_index;
 	size_t	end_index;

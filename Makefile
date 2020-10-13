@@ -11,7 +11,11 @@ SRC = ft_strnstr.c ft_isdigit.c ft_strlcpy.c ft_strlen.c \
 
 OBJ = ${SRC:.c=.o}
 
+CC = gcc
+
 CFLAG = -Wall -Wextra -Werror
+
+RM = rm -rf
 
 .c.o:
 		${CC} ${CFLAG} -g -c $< -o ${<:.c=.o}

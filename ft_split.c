@@ -6,13 +6,13 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/11 17:08:33 by silim             #+#    #+#             */
-/*   Updated: 2020/10/12 23:40:37 by silim            ###   ########.fr       */
+/*   Updated: 2020/10/13 14:54:53 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	*free_error(char **word_set)
+static void			*free_error(char **word_set)
 {
 	unsigned int	i;
 
@@ -26,9 +26,9 @@ static void	*free_error(char **word_set)
 	return (NULL);
 }
 
-static size_t	get_size(char const *s, char c)
+static size_t		get_size(char const *s, char c)
 {
-	size_t	count;
+	size_t			count;
 
 	count = 0;
 	while (*s)
@@ -42,11 +42,11 @@ static size_t	get_size(char const *s, char c)
 	return (count);
 }
 
-static char	**split_word(char **word_set, char const *s, char c)
+static char			**split_word(char **word_set, char const *s, char c)
 {
-	size_t	start;
-	size_t	end;
-	size_t	n;
+	size_t			start;
+	size_t			end;
+	size_t			n;
 
 	start = 0;
 	n = 0;
@@ -54,22 +54,22 @@ static char	**split_word(char **word_set, char const *s, char c)
 	while (s[end] == c)
 		++end;
 	while (s[end] && n < (get_size(s, c)))
-		{
-			start = end;
-			while (s[end] != c && s[end])
-				++end;
-			if (!(word_set[n++] = ft_substr(s, start, end - start)))
-				return (free_error(word_set));
-			while (s[end] == c)
-				++end;
-		}
-		word_set[n] = 0;
+	{
+		start = end;
+		while (s[end] != c && s[end])
+			++end;
+		if (!(word_set[n++] = ft_substr(s, start, end - start)))
+			return (free_error(word_set));
+		while (s[end] == c)
+			++end;
+	}
+	word_set[n] = 0;
 	return (word_set);
 }
 
-char	**ft_split(char const *s, char c)
+char				**ft_split(char const *s, char c)
 {
-	char	**word_set;
+	char			**word_set;
 
 	if (!*s)
 		return (0);
