@@ -6,7 +6,7 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/12 23:51:30 by silim             #+#    #+#             */
-/*   Updated: 2020/10/13 18:18:05 by silim            ###   ########.fr       */
+/*   Updated: 2020/10/13 18:19:45 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ char			*ft_itoa(int nbr)
 	size_t		len;
 
 	n = nbr;
+	if (n == 0)
+		return (ft_strdup("0"));
 	len = ft_len(n);
 	if (!(str = (char *)malloc(sizeof(char) * (len + 1))))
 		return (NULL);
@@ -41,7 +43,7 @@ char			*ft_itoa(int nbr)
 		str[0] = '-';
 		n *= -1;
 	}
-	while (n >= 0)
+	while (n)
 	{
 		str[--len] = '0' + (n % 10);
 		n = n / 10;
