@@ -6,7 +6,7 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/13 17:07:47 by silim             #+#    #+#             */
-/*   Updated: 2020/10/13 19:06:26 by silim            ###   ########.fr       */
+/*   Updated: 2020/10/13 19:08:12 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,10 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		return (0);
 	i = 0;
 	while (s[i])
+	{
 		new_str[i] = f(i, s[i]);
+		i++;
+	}
 	new_str[i] = 0;
 	return (new_str);
 }
