@@ -1,35 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/10 15:21:32 by silim             #+#    #+#             */
-/*   Updated: 2020/10/14 16:27:53 by silim            ###   ########.fr       */
+/*   Created: 2020/10/15 17:46:42 by silim             #+#    #+#             */
+/*   Updated: 2020/10/16 15:55:01 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	size_t	dst_len;
-	size_t	src_len;
-	size_t	i;
+	t_list	*next;
 
-	src_len = ft_strlen(src);
-	dst_len = ft_strlen(dst);
-	i = 0;
-	if (dstsize == 0)
-		return (src_len);
-	while (src[i] && (dst_len + i) < (dstsize - 1))
-	{
-		dst[dst_len + i] = src[i];
-		i++;
+	if (lst)
+	{	while (*lst)
+		{
+			next = (*lst)->next;
+			ft_lstdelone(*lst, del);
+			*lst = next;
+		}
 	}
-	dst[dst_len + i] = '\0';
-	if (dst_len < dstsize)
-		return (dst_len + src_len);
-	return (dstsize + src_len);
 }

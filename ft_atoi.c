@@ -6,32 +6,35 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/01 17:40:38 by silim             #+#    #+#             */
-/*   Updated: 2020/10/11 02:04:23 by silim            ###   ########.fr       */
+/*   Updated: 2020/10/16 18:01:39 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {
 	long	num;
 	int		sign;
+	int		count;
 
 	num = 0;
 	sign = 1;
+	count = 0;
 	while (*str == ' ' || (*str >= 9 && *str <= 13))
-	{
-		if (*str == '\e')
-			return (0);
 		str++;
-	}
-	if (*str == '-')
+	if (*str == '-' || *str == '+')
 	{
-		sign = -1;
+		sign = (*str == '-') ? -1 : 1;
 		str++;
 	}
 	while (*str >= '0' && *str <= '9')
 	{
 		num = num * 10 + (*str - '0');
 		str++;
+		count++;
 	}
+	if (count > 20)
+		return ((sign == 1) ? -1 : 0);
 	return (num * sign);
 }

@@ -6,11 +6,10 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 15:45:13 by silim             #+#    #+#             */
-/*   Updated: 2020/10/11 00:15:47 by silim            ###   ########.fr       */
+/*   Updated: 2020/10/14 00:45:52 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
 
 size_t	ft_strlen(const char *s)

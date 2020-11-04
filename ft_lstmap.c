@@ -1,35 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/10 15:21:32 by silim             #+#    #+#             */
-/*   Updated: 2020/10/14 16:27:53 by silim            ###   ########.fr       */
+/*   Created: 2020/10/16 13:28:28 by silim             #+#    #+#             */
+/*   Updated: 2020/10/16 15:15:47 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void * ), void (*del)(void *))
 {
-	size_t	dst_len;
-	size_t	src_len;
-	size_t	i;
+	t_list	*new_lst;
+	t_list	*new_elem;
 
-	src_len = ft_strlen(src);
-	dst_len = ft_strlen(dst);
-	i = 0;
-	if (dstsize == 0)
-		return (src_len);
-	while (src[i] && (dst_len + i) < (dstsize - 1))
+	if (!(lst) || !(f))
+		return (NULL);
+	if (!(new_lst = ft_lstnew(f(lst->content))))
+		return (NULL);
+	lst = lst->next;
+	while (lst)
 	{
-		dst[dst_len + i] = src[i];
-		i++;
+		if (!(new_elem = ft_lstnew(f(lst->content))))
+		{
+			ft_lstclear(&new_lst, del);
+			return (0);
+		}
+		ft_lstadd_back(&new_lst, new_elem);
+		lst = lst->next;
 	}
-	dst[dst_len + i] = '\0';
-	if (dst_len < dstsize)
-		return (dst_len + src_len);
-	return (dstsize + src_len);
+	return (new_lst);
 }

@@ -31,7 +31,7 @@ char		*ft_strtrim(char const *s1, char const *set)
 	size_t	start_index;
 	size_t	end_index;
 
-	if (!*s1 || !*set)
+	if (!s1 || !set)
 		return (NULL);
 	start_index = 0;
 	while (s1[start_index] && ft_is_set(s1[start_index], set))

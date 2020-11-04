@@ -28,12 +28,12 @@ static void			*free_error(char **word_set)
 
 static size_t		get_size(char const *s, char c)
 {
-	size_t			count;
+	size_t		count;
 
 	count = 0;
 	while (*s)
 	{
-		if (*s == c)
+		if (*s != c && *(s + 1) == c)
 			++count;
 		++s;
 	}
@@ -53,7 +53,7 @@ static char			**split_word(char **word_set, char const *s, char c)
 	end = 0;
 	while (s[end] == c)
 		++end;
-	while (s[end] && n < (get_size(s, c)))
+	while (s[end] && n <= (get_size(s, c)))
 	{
 		start = end;
 		while (s[end] != c && s[end])
@@ -71,9 +71,9 @@ char				**ft_split(char const *s, char c)
 {
 	char			**word_set;
 
-	if (!*s)
+	if (!s)
 		return (0);
-	if (!(word_set = malloc(sizeof(char *) * (get_size(s, c) + 1))))
+	if (!(word_set = malloc(sizeof(char *) * (get_size(s, c)) + 1)))
 		return (0);
 	return (split_word(word_set, s, c));
 }
