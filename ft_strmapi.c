@@ -6,15 +6,15 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/13 17:07:47 by silim             #+#    #+#             */
-/*   Updated: 2020/10/13 19:08:12 by silim            ###   ########.fr       */
+/*   Updated: 2020/11/04 19:34:53 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char				*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char	*new_str;
+	char			*new_str;
 	unsigned int	len;
 	unsigned int	i;
 
