@@ -6,7 +6,7 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/11 17:08:33 by silim             #+#    #+#             */
-/*   Updated: 2020/10/13 14:54:53 by silim            ###   ########.fr       */
+/*   Updated: 2020/11/04 22:36:26 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,15 @@ static size_t		get_size(char const *s, char c)
 	count = 0;
 	while (*s)
 	{
-		if (*s != c && *(s + 1) == c)
+		while (*s == c)
+			s++;
+		if (*s && *s != c)
+		{
+			while (*s && *s !=c)
+				++s;
 			++count;
-		++s;
+		}
 	}
-	if (*(s - 1) != c)
-		++count;
 	return (count);
 }
 
@@ -63,7 +66,7 @@ static char			**split_word(char **word_set, char const *s, char c)
 		while (s[end] == c)
 			++end;
 	}
-	word_set[n] = 0;
+	word_set[n] = NULL;
 	return (word_set);
 }
 
@@ -73,7 +76,7 @@ char				**ft_split(char const *s, char c)
 
 	if (!s)
 		return (0);
-	if (!(word_set = malloc(sizeof(char *) * (get_size(s, c)) + 1)))
+	if (!(word_set = malloc(sizeof(char *) * ((get_size(s, c)) + 1))))
 		return (0);
 	return (split_word(word_set, s, c));
 }
