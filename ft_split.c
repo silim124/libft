@@ -6,7 +6,7 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/11 17:08:33 by silim             #+#    #+#             */
-/*   Updated: 2020/11/04 22:36:26 by silim            ###   ########.fr       */
+/*   Updated: 2020/11/09 16:00:33 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static size_t		get_size(char const *s, char c)
 			s++;
 		if (*s && *s != c)
 		{
-			while (*s && *s !=c)
+			while (*s && *s != c)
 				++s;
 			++count;
 		}
