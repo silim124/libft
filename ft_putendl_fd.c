@@ -6,7 +6,7 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/14 15:52:52 by silim             #+#    #+#             */
-/*   Updated: 2020/10/15 17:56:16 by silim            ###   ########.fr       */
+/*   Updated: 2020/11/14 02:54:22 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	if (!(s) || fd < 0)
+	if (!(s))
 		return ;
 	write(fd, s, ft_strlen(s));
 	write(fd, "\n", 1);

@@ -6,7 +6,7 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 15:21:38 by silim             #+#    #+#             */
-/*   Updated: 2020/10/13 14:22:08 by silim            ###   ########.fr       */
+/*   Updated: 2020/11/14 02:21:37 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char		*ft_strtrim(char const *s1, char const *set)
 	size_t	end_index;
 
 	if (!s1 || !set)
-		return (NULL);
+		return (0);
 	start_index = 0;
 	while (s1[start_index] && ft_is_set(s1[start_index], set))
 		start_index++;

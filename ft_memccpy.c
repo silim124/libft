@@ -6,7 +6,7 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 15:21:01 by silim             #+#    #+#             */
-/*   Updated: 2020/10/10 15:22:04 by silim            ###   ########.fr       */
+/*   Updated: 2020/11/14 00:46:15 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 		if (((unsigned char *)dst)[i - 1] == (unsigned char)c)
 			return (dst + i);
 	}
-	return (NULL);
+	return (0);
 }

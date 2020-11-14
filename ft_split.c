@@ -6,11 +6,12 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/11 17:08:33 by silim             #+#    #+#             */
-/*   Updated: 2020/11/09 16:00:33 by silim            ###   ########.fr       */
+/*   Updated: 2020/11/14 01:04:24 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static void			*free_error(char **word_set)
 {
@@ -23,7 +24,7 @@ static void			*free_error(char **word_set)
 		i++;
 	}
 	free(word_set);
-	return (NULL);
+	return (0);
 }
 
 static size_t		get_size(char const *s, char c)
@@ -56,7 +57,7 @@ static char			**split_word(char **word_set, char const *s, char c)
 	end = 0;
 	while (s[end] == c)
 		++end;
-	while (s[end] && n <= (get_size(s, c)))
+	while (s[start] && n < (get_size(s, c)))
 	{
 		start = end;
 		while (s[end] != c && s[end])
@@ -66,7 +67,7 @@ static char			**split_word(char **word_set, char const *s, char c)
 		while (s[end] == c)
 			++end;
 	}
-	word_set[n] = NULL;
+	word_set[n] = 0;
 	return (word_set);
 }
 
