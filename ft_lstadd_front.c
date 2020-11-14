@@ -6,7 +6,7 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/15 16:33:57 by silim             #+#    #+#             */
-/*   Updated: 2020/10/15 17:55:36 by silim            ###   ########.fr       */
+/*   Updated: 2020/11/14 21:48:24 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (!new)
+	if (!lst || !new)
 		return ;
 	if (!*lst)
 	{
