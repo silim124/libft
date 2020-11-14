@@ -6,17 +6,17 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/01 17:40:38 by silim             #+#    #+#             */
-/*   Updated: 2020/11/14 13:19:05 by silim            ###   ########.fr       */
+/*   Updated: 2020/11/14 13:30:38 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+int						ft_atoi(const char *str)
 {
 	unsigned long long	num;
-	int		sign;
-	int		count;
+	int					sign;
+	int					count;
 
 	num = 0;
 	sign = 1;
