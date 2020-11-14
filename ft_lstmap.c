@@ -6,7 +6,7 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/16 13:28:28 by silim             #+#    #+#             */
-/*   Updated: 2020/11/04 19:36:03 by silim            ###   ########.fr       */
+/*   Updated: 2020/11/14 21:05:50 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new_lst;
 	t_list	*new_elem;
 
-	if (!(lst) || !(f))
+	if (!lst || !f)
 		return (NULL);
 	if (!(new_lst = ft_lstnew(f(lst->content))))
 		return (NULL);
