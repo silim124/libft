@@ -6,7 +6,7 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 15:21:20 by silim             #+#    #+#             */
-/*   Updated: 2020/10/11 00:09:24 by silim            ###   ########.fr       */
+/*   Updated: 2020/11/14 13:51:04 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ char	*ft_strdup(const char *s)
 		new_mem[len] = s[len];
 		len++;
 	}
-	new_mem[len] = 0;
+	new_mem[len] = '\0';
 	return (new_mem);
 }

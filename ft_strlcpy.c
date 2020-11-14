@@ -6,7 +6,7 @@
 /*   By: silim <silim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 15:21:34 by silim             #+#    #+#             */
-/*   Updated: 2020/10/10 16:09:08 by silim            ###   ########.fr       */
+/*   Updated: 2020/11/14 13:51:15 by silim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		count++;
 	while (++i < dstsize - 1 && src[i])
 		dst[i] = src[i];
-	dst[i] = 0;
+	dst[i] = '\0';
 	return (count);
 }
