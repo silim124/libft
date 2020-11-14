@@ -60,8 +60,8 @@ all : $(NAME)
 $(NAME) : $(OBJ)
 		ar rc $(NAME) $(OBJ)
 
-bonus : $(OBJ_B)
-		ar rc $(NAME) $(OBJ_B)
+bonus : $(OBJ) $(OBJ_B)
+		ar rc $(NAME) $(OBJ) $(OBJ_B)
 
 clean :
 	$(RM) $(OBJ) $(OBJ_B)
